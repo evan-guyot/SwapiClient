@@ -3,6 +3,7 @@ import Navbar from "@/components/general/navbar";
 import SwapiDisplayer from "@/components/swapi/swapi-displayer";
 import SwapiMenus from "@/components/swapi/swapi-menu";
 import { IDictionaryContent } from "@/interfaces/main";
+import { RocketLaunchIcon } from "@heroicons/react/24/outline";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
@@ -38,14 +39,26 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="flex min-h-screen flex-col items-center p-24">
-        <SwapiMenus
-          menus={swapiMenus}
-          indexChanger={changeIndex}
-          selectedIndex={index}
-        />
-        {swapiMenus && <SwapiDisplayer menu={swapiMenus[index]} />}
-      </main>
+      {swapiMenus ? (
+        <main className="flex min-h-screen flex-col items-center p-24">
+          <SwapiMenus
+            menus={swapiMenus}
+            indexChanger={changeIndex}
+            selectedIndex={index}
+          />
+          <SwapiDisplayer menu={swapiMenus[index]} />
+        </main>
+      ) : (
+        <main className="flex min-h-screen flex-col items-center bg-indigo-500 justify-center">
+          <div className="flex flex-row animate-ping">
+            <p className="text-2xl font-semibold text-white">
+              Fetching your data
+            </p>
+            {"  "}
+            <RocketLaunchIcon className="h-8 w-8 text-white" />
+          </div>
+        </main>
+      )}
     </>
   );
 }

@@ -13,17 +13,17 @@ export default function SwapiDisplayer(props: { menu: IDictionaryContent }) {
 
   switch (menu.key) {
     case "people":
-      return <SwapiPeople />;
+      return <SwapiPeople data={menu} />;
     case "planets":
-      return <SwapiPlanets />;
+      return <SwapiPlanets data={menu} />;
     case "films":
-      return <SwapiFilms />;
+      return <SwapiFilms data={menu} />;
     case "species":
-      return <SwapiSpecies />;
+      return <SwapiSpecies data={menu} />;
     case "vehicles":
-      return <SwapiVehicles />;
+      return <SwapiVehicles data={menu} />;
     case "starships":
-      return <SwapiStarships />;
+      return <SwapiStarships data={menu} />;
     default:
       return "Select a menu";
   }

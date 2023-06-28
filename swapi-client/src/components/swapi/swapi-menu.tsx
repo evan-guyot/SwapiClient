@@ -32,7 +32,7 @@ export default function SwapiMenus(props: {
         <div className="hidden sm:flex sm:flex-1 sm:items-center sm:justify-between">
           <div>
             <nav
-              className="isolate inline-flex -space-x-px rounded-md shadow-sm"
+              className="isolate inline-flex -space-x-px rounded-md shadow-sm bg-white"
               aria-label="Pagination"
             >
               <a

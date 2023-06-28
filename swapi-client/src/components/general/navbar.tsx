@@ -2,17 +2,17 @@
 "use client";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
-import {
-  IDictionaryContent,
-  INavigation,
-  INavigationItem,
-} from "@/interfaces/main";
+import { INavigationItem } from "@/interfaces/main";
 
 const navigation: INavigationItem[] = [
-  { name: "Dashboard", href: "#", current: true, extraData: undefined },
-  { name: "Team", href: "#", current: false, extraData: undefined },
-  { name: "Projects", href: "#", current: false, extraData: undefined },
-  { name: "Calendar", href: "#", current: false, extraData: undefined },
+  { name: "Home", href: "#", current: true, extraData: undefined },
+  { name: "About", href: "#", current: false, extraData: undefined },
+  {
+    name: "Swapi API ->",
+    href: "https://swapi.dev/",
+    current: false,
+    extraData: undefined,
+  },
 ];
 
 function classNames(...classes: string[]) {
