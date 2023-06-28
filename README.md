@@ -26,7 +26,7 @@ With the Swapi Client project, you can practice working with API data, explore d
 
 ## ▶️ Usage
 
-1. Start the development server: `npx nest dev`
+1. Start the development server: `npx next dev`
 2. Open your browser and visit: `http://localhost:3000`
 
 ## 🖼️ Screenshots
