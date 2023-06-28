@@ -5,7 +5,7 @@ import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { INavigationItem } from "@/interfaces/main";
 
 const navigation: INavigationItem[] = [
-  { name: "Home", href: "#", current: true, extraData: undefined },
+  { name: "Home", href: "/", current: true, extraData: undefined },
   { name: "About", href: "#", current: false, extraData: undefined },
   {
     name: "Swapi API ->",
