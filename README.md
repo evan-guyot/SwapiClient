@@ -41,4 +41,4 @@ With the Swapi Client project, you can practice working with API data, explore d
 
 ## 🧑‍⚖️ License
 
-This project is licensed under the MIT License. See the [LICENSE](SECURITY.md) file for more information.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
