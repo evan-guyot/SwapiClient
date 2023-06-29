@@ -33,11 +33,11 @@ With the Swapi Client project, you can practice working with API data, explore d
 
 ### Home Page
 
-![Home Page](github/assets/home.png)
+![Home Page](.github/assets/home.png)
 
 ### People table
 
-![People table](github/assets/people.png)
+![People table](.github/assets/people.png)
 
 ## 🧑‍⚖️ License
 
