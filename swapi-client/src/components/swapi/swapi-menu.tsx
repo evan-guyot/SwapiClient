@@ -18,15 +18,17 @@ export default function SwapiMenus(props: {
             href="#"
             className="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
             onClick={() => indexChanger(selectedIndex - 1)}
+            key={0}
           >
-            Previous
+            <ChevronLeftIcon className="h-5 w-5" aria-hidden="true" />
           </a>
           <a
             href="#"
             className="relative ml-3 inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
             onClick={() => indexChanger(selectedIndex + 1)}
+            key={1}
           >
-            Next
+            <ChevronRightIcon className="h-5 w-5" aria-hidden="true" />
           </a>
         </div>
         <div className="hidden sm:flex sm:flex-1 sm:items-center sm:justify-between">
@@ -39,6 +41,7 @@ export default function SwapiMenus(props: {
                 href="#"
                 className="relative inline-flex items-center rounded-l-md px-2 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
                 onClick={() => indexChanger(selectedIndex - 1)}
+                key={0}
               >
                 <span className="sr-only">Previous</span>
                 <ChevronLeftIcon className="h-5 w-5" aria-hidden="true" />
@@ -51,6 +54,7 @@ export default function SwapiMenus(props: {
                       aria-current="page"
                       className="relative z-10 inline-flex items-center bg-indigo-600 px-4 py-2 text-sm font-semibold text-white focus:z-20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 capitalize "
                       onClick={() => indexChanger(index)}
+                      key={index + 2}
                     >
                       {menu.key}
                     </a>
@@ -58,7 +62,7 @@ export default function SwapiMenus(props: {
                     <a
                       href="#"
                       className="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0 capitalize "
-                      onClick={() => indexChanger(index)}
+                      onClick={() => indexChanger(index) + 2}
                     >
                       {menu.key}
                     </a>
@@ -68,6 +72,7 @@ export default function SwapiMenus(props: {
                 href="#"
                 className="relative inline-flex items-center rounded-r-md px-2 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
                 onClick={() => indexChanger(selectedIndex + 1)}
+                key={1}
               >
                 <span className="sr-only">Next</span>
                 <ChevronRightIcon className="h-5 w-5" aria-hidden="true" />

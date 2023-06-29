@@ -6,7 +6,7 @@ export interface ISwapiPeople {
   results: Array<ISwapiCharacter>;
 }
 
-interface ISwapiCharacter {
+export interface ISwapiCharacter {
   name: string;
   height: string;
   mass: string;
