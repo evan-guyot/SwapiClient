@@ -12,4 +12,6 @@ jobs:
           cd swapi-client
           npm install
       - name: Build project assets
-        run: npm run build
+        run: |
+          cd swapi-client
+          npm run build
