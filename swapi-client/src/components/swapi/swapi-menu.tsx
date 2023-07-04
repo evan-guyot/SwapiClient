@@ -15,16 +15,14 @@ export default function SwapiMenus(props: {
       <div className="flex items-center px-4 py-3 sm:px-6">
         <div className="flex flex-1 sm:hidden">
           <a
-            href="#"
-            className="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
+            className="relative inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 cursor-pointer"
             onClick={() => indexChanger(selectedIndex - 1)}
             key={0}
           >
             <ChevronLeftIcon className="h-5 w-5" aria-hidden="true" />
           </a>
           <a
-            href="#"
-            className="relative ml-3 inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
+            className="relative ml-3 inline-flex items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 cursor-pointer"
             onClick={() => indexChanger(selectedIndex + 1)}
             key={1}
           >
@@ -38,8 +36,7 @@ export default function SwapiMenus(props: {
               aria-label="Pagination"
             >
               <a
-                href="#"
-                className="relative inline-flex items-center rounded-l-md px-2 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
+                className="relative inline-flex items-center rounded-l-md px-2 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0 cursor-pointer"
                 onClick={() => indexChanger(selectedIndex - 1)}
                 key={0}
               >
@@ -50,9 +47,8 @@ export default function SwapiMenus(props: {
                 menus.map((menu, index) => {
                   return index == selectedIndex ? (
                     <a
-                      href="#"
                       aria-current="page"
-                      className="relative z-10 inline-flex items-center bg-indigo-600 px-4 py-2 text-sm font-semibold text-white focus:z-20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 capitalize "
+                      className="relative z-10 inline-flex items-center bg-indigo-600 px-4 py-2 text-sm font-semibold text-white focus:z-20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 capitalize cursor-pointer"
                       onClick={() => indexChanger(index)}
                       key={index + 2}
                     >
@@ -60,8 +56,7 @@ export default function SwapiMenus(props: {
                     </a>
                   ) : (
                     <a
-                      href="#"
-                      className="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0 capitalize "
+                      className="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0 capitalize cursor-pointer"
                       onClick={() => indexChanger(index) + 2}
                     >
                       {menu.key}
@@ -69,8 +64,7 @@ export default function SwapiMenus(props: {
                   );
                 })}
               <a
-                href="#"
-                className="relative inline-flex items-center rounded-r-md px-2 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
+                className="relative inline-flex items-center rounded-r-md px-2 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0 cursor-pointer"
                 onClick={() => indexChanger(selectedIndex + 1)}
                 key={1}
               >
