@@ -36,7 +36,18 @@ export interface ISwapiPlanet {
   population: string;
 }
 //Films
-export interface ISwapiFilm {}
+export interface ISwapiFilms extends ISwapiData {
+  results: Array<ISwapiFilm>;
+}
+
+export interface ISwapiFilm {
+  title: string;
+  episode_id: number;
+  director: string;
+  producer: string;
+  release_date: Date;
+  opening_crawl: string;
+}
 //Species
 export interface ISwapiSpecies {}
 //Vehicles

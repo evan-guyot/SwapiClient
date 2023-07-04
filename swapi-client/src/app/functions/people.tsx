@@ -9,7 +9,7 @@ export function ModalPeople(props: {
 
   return (
     <div
-      id="defaultModal"
+      id="peopleModal"
       aria-hidden="true"
       className="fixed top-0 left-0 right-0 z-50 w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-full max-h-full m-auto bg-gray-50p"
     >

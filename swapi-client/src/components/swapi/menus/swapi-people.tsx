@@ -4,11 +4,7 @@ import { ModalPeople } from "@/app/functions/people";
 import { TableFooter, TableHeader } from "@/app/functions/table";
 import { IDictionaryContent } from "@/interfaces/main";
 import { ISwapiCharacter, ISwapiPeople } from "@/interfaces/swapi";
-import {
-  ChevronLeftIcon,
-  ChevronRightIcon,
-  EyeIcon,
-} from "@heroicons/react/24/outline";
+import { EyeIcon } from "@heroicons/react/24/outline";
 import axios from "axios";
 import { useEffect, useState } from "react";
 

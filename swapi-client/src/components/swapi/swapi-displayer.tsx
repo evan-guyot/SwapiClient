@@ -1,11 +1,9 @@
 "use client";
 
 import SwapiFilms from "./menus/swapi-films";
+import SwapiNotImplementedMenu from "./menus/swapi-notimplemented";
 import SwapiPeople from "./menus/swapi-people";
 import SwapiPlanets from "./menus/swapi-planets";
-import SwapiSpecies from "./menus/swapi-species";
-import SwapiStarships from "./menus/swapi-starships";
-import SwapiVehicles from "./menus/swapi-vehicles";
 import { IDictionaryContent } from "@/interfaces/main";
 
 export default function SwapiDisplayer(props: { menu: IDictionaryContent }) {
@@ -19,12 +17,7 @@ export default function SwapiDisplayer(props: { menu: IDictionaryContent }) {
     case "films":
       return <SwapiFilms data={menu} />;
     case "species":
-      return <SwapiSpecies data={menu} />;
-    case "vehicles":
-      return <SwapiVehicles data={menu} />;
-    case "starships":
-      return <SwapiStarships data={menu} />;
     default:
-      return "Select a menu";
+      return <SwapiNotImplementedMenu />;
   }
 }

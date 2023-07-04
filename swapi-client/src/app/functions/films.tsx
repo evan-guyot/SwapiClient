@@ -1,53 +1,13 @@
-import { ISwapiPlanet } from "@/interfaces/swapi";
+import { ISwapiFilm } from "@/interfaces/swapi";
 
-export function GetPopulationChip(population: string) {
-  var populationValue: number;
-
-  try {
-    populationValue = parseInt(population);
-  } catch (e) {
-    return (
-      <span className="inline-flex items-center gap-1 rounded-full bg-gray-300 px-2 py-1 text-xs font-semibold text-gray-600">
-        unknown
-      </span>
-    );
-  }
-  if (populationValue < 10 ** 6) {
-    return (
-      <span className="inline-flex items-center gap-1 rounded-full bg-green-100 px-2 py-1 text-xs font-semibold text-green-600">
-        {population}
-      </span>
-    );
-  } else if (populationValue < 10 ** 12) {
-    return (
-      <span className="inline-flex items-center gap-1 rounded-full bg-orange-100 px-2 py-1 text-xs font-semibold text-orange-400">
-        {population}
-      </span>
-    );
-  } else if (populationValue < 10 ** 24) {
-    return (
-      <span className="inline-flex items-center gap-1 rounded-full bg-red-100 px-2 py-1 text-xs font-semibold text-red-600">
-        {population}
-      </span>
-    );
-  } else {
-    return (
-      <span className="inline-flex items-center gap-1 rounded-full bg-black-100 px-2 py-1 text-xs font-semibold text-dark-600">
-        {population}
-      </span>
-    );
-  }
-}
-
-export function ModalPlanet(props: {
-  infos: ISwapiPlanet;
+export function ModalFilms(props: {
+  infos: ISwapiFilm;
   fSetterInfos: (param: undefined) => void;
 }) {
   const { infos, fSetterInfos } = props;
-
   return (
     <div
-      id="planetModal"
+      id="filmModal"
       aria-hidden="true"
       className="fixed top-0 left-0 right-0 z-50 w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-full max-h-full m-auto bg-gray-50p"
     >
@@ -55,7 +15,7 @@ export function ModalPlanet(props: {
         <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
           <div className="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600">
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-              {infos.name}
+              Star Wars {infos.episode_id} - {infos.title}
             </h3>
             <button
               type="button"
@@ -80,22 +40,21 @@ export function ModalPlanet(props: {
           </div>
           <div className="p-6 space-y-6">
             <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-              Gravity :
-              <span className="inline-flex items-center gap-1 rounded-full bg-purple-100 px-2 py-1 text-xs font-semibold text-purple-600">
-                {" "}
-                {infos.gravity}
-              </span>
-            </p>
-            <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-              Population :{" "}
+              Director :{" "}
               <span className="inline-flex items-center gap-1 rounded-full bg-green-100 px-2 py-1 text-xs font-semibold text-green-600">
-                {infos.population}
+                {infos.director}
               </span>
             </p>
             <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-              Climate :
+              Producer :{" "}
               <span className="inline-flex items-center gap-1 rounded-full bg-yellow-100 px-2 py-1 text-xs font-semibold text-yellow-600">
-                {infos.climate}
+                {infos.producer}
+              </span>
+            </p>
+            <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+              Release date :{" "}
+              <span className="inline-flex items-center gap-1 rounded-full bg-blue-100 px-2 py-1 text-xs font-semibold text-blue-600">
+                {infos.release_date.toString()}
               </span>
             </p>
           </div>
